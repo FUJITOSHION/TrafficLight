@@ -1,0 +1,117 @@
+body{
+  background: #eee;
+}
+.container{
+  margin: 100px auto;
+  width: 600px;
+  height: 200px;
+  background: #a9a9a9;
+  border-radius: 100px;
+}
+#green{
+background: lightgreen;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+box-shadow: 0 -15px 4px;
+
+}
+#green.Opacity{
+background: green;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+box-shadow: 0 -15px 4px;
+opacity: 0.1;
+
+}
+#yellow.Opacity{
+background: yellow;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+box-shadow: 0 -15px 4px;
+opacity: 0.2;
+
+}
+#red.Opacity{
+background: red;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+box-shadow: 0 -15px 4px;
+opacity: 0.2;
+
+}
+#yellow{
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 -15px 4px;
+}
+#red{
+  background: red;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 -15px 4px;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+#act{
+  cursor: pointer;
+  background: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  opacity: 0.8;
+  box-shadow: 0 10px 0 darkblue;
+  user-select: none;
+  margin:0 auto;
+}
+#act.abc{
+  background: #a9a9a9;
+  width: 0px;
+  height: 0px;
+}
+
+
+#act:hover{
+  opacity: 1;
+}
+
+#act.pushed{
+  margin-top: 5px;
+  box-shadow: 0 4px 0 darkblue;
+
+}
+#stop{
+  cursor: pointer;
+  background: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  opacity: 0.8;
+  box-shadow: 0 10px 0 darkred;
+  user-select: none;
+  margin:0 auto;
+}
+#stop:hover{
+  opacity: 1;
+}
+
+#stop.pushed{
+  margin-top: 5px;
+  box-shadow: 0 4px 0 darkred;
+}
