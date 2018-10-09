@@ -1,208 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>siganal</title>
-<style>
-body{
-  background: #eee;
-}
-.container{
-  margin: 100px auto;
-  width: 600px;
-  height: 200px;
-  background: #a9a9a9;
-  border-radius: 100px;
-}
-#green{
-background: lightgreen;
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
+  <head>
+      <meta charset="utf-8">
+      <title>siganal</title>
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
-}
-#green.Opacity{
-background: green;
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
-opacity: 0.1;
-
-}
-#yellow.Opacity{
-background: yellow;
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
-opacity: 0.2;
-
-}
-#red.Opacity{
-background: red;
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
-opacity: 0.2;
-
-}
-#yellow{
-  background-color: yellow;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0 -15px 4px;
-}
-#red{
-  background: red;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0 -15px 4px;
-}
-.container{
-  display: flex;
-  justify-content: space-evenly;
-}
-.btn{
-  display: flex;
-  justify-content: space-evenly;
-}
-#actuon{
-  cursor: pointer;
-  background: blue;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 100px;
-  opacity: 0.8;
-  box-shadow: 0 10px 0 darkblue;
-  user-select: none;
-  margin:0 auto;
-}
-#actuon.abc{
-  background: #a9a9a9;
-  width: 0px;
-  height: 0px;
-}
-
-
-#actuon:hover{
-  opacity: 1;
-}
-
-#actuon.pushed{
-  margin-top: 5px;
-  box-shadow: 0 4px 0 darkblue;
-
-}
-#stop{
-  cursor: pointer;
-  background: red;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 100px;
-  opacity: 0.8;
-  box-shadow: 0 10px 0 darkred;
-  user-select: none;
-  margin:0 auto;
-}
-#stop:hover{
-  opacity: 1;
-}
-
-#stop.pushed{
-  margin-top: 5px;
-  box-shadow: 0 4px 0 darkred;
-}
-</style>
-</head>
-<body>
   <div class="container">
     <p id="green"></p>
     <p id="yellow"></p>
     <p id="red"></p>
-</div>
-  <div class="btn">
-  <p id="actuon">start</p>
-  <!-- <p id="stop">stop</p> -->
   </div>
 
-</body>
-<script >
-(function(){
-  'use strict';
-  var green = document.getElementById('green');
-  var yellow = document.getElementById('yellow');
-  var red = document.getElementById('red');
-  var actuon = document.getElementById('actuon');
+  <div class="btn">
+    <p id="act">start</p>
+  </div>
 
-  var repeatFlag =false;
+<script src="js/main.js"></script>
 
-  var initFunc = function(){
-    // 初期値
-    green.className='Opacity';
-    yellow.className='Opacity';
-    red.className='';
-
-  }
-
-  var endFunc = function(){
-   //終了
-   actuon.innerHTML = 'start';
-   repeatFlag =false;
-  }
-
-  var change_green = function(){
-    repeatFlag =true;
-    green.className='';
-    yellow.className='Opacity';
-    red.className='Opacity';
-      actuon.innerHTML = '';
-  }
-
-  var change_yellow = function(){
-    repeatFlag =true;
-    green.className='Opacity';
-    yellow.className='';
-    red.className='Opacity';
-      actuon.innerHTML = '';
-  }
-
-  var change_red = function(){
-    // repeatFlag =true;
-    green.className='Opacity';
-    yellow.className='Opacity';
-    red.className='';
-    endFunc();
-  }
-
-
-///////
-  initFunc();
-
-
-  actuon.onclick =function(){
-    if(repeatFlag==true){
-      return;
-    }
-    actuon.innerHTML = '';
-
-   setTimeout(change_green,1000);
-   setTimeout(change_yellow,2000);
-   setTimeout(change_red,3000);
-
-  }
-
-
-
-
-  })();
-    </script>
-    </html>
+  </body>
+</html>
