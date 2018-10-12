@@ -55,7 +55,7 @@ background: red;
   opacity: 0.8;
   box-shadow: 0 10px 0 darkblue;
   user-select: none;
-  margin:1px auto;
+  margin:0 auto;
 }
 
 #act:hover{
