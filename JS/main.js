@@ -4,7 +4,6 @@
   var yellow = document.getElementById('yellow');
   var red = document.getElementById('red');
   var act = document.getElementById('act');
-
   var repeatFlag =false;
 
   var initFunc = function(){
