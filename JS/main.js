@@ -11,29 +11,27 @@
     yellow.className=green.className='Dark';
     red.className='';
   }
-
+  var inact = function(){
+    //途中
+    repeatFlag =true;
+    red.className=yellow.className=green.className='Dark';
+    act.innerHTML = '';
+  }
   var endFunc = function(){
    //終了時
    act.innerHTML = 'start';
    act.className = ''
    repeatFlag =false;
   }
-  var inact = function(){
-  //途中
-  repeatFlag =true;
-  red.className=yellow.className=green.className='Dark';
-  act.innerHTML = '';
-  }
+
   var change_green = function(){
     inact();
     green.className='';
   }
-
   var change_yellow = function(){
     inact();
     yellow.className='';
   }
-
   var change_red = function(){
     inact();
     red.className='';
