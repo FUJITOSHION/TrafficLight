@@ -8,41 +8,37 @@
 
   var initFunc = function(){
     // 初期値
-    green.className='Opacity';
-    yellow.className='Opacity';
+    yellow.className=green.className='Dark';
     red.className='';
   }
 
   var endFunc = function(){
    //終了時
    act.innerHTML = 'start';
-   act.className =''
+   act.className = ''
    repeatFlag =false;
   }
-
+  var inact = function(){
+  //途中
+  repeatFlag =true;
+  red.className=yellow.className=green.className='Dark';
+  act.innerHTML = '';
+  }
   var change_green = function(){
-    repeatFlag =true;
+    inact();
     green.className='';
-    yellow.className='Opacity';
-    red.className='Opacity';
-      act.innerHTML = '';
   }
 
   var change_yellow = function(){
-    repeatFlag =true;
-    green.className='Opacity';
+    inact();
     yellow.className='';
-    red.className='Opacity';
-      act.innerHTML = '';
   }
 
   var change_red = function(){
-    green.className='Opacity';
-    yellow.className='Opacity';
+    inact();
     red.className='';
     endFunc();
   }
-
   initFunc();
 
   act.onclick =function(){
