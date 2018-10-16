@@ -23,7 +23,6 @@
    act.className = ''
    repeatFlag =false;
   }
-
   var change_green = function(){
     inact();
     green.className='';
@@ -45,8 +44,13 @@
     }
    this.className ='pushed';
    act.innerHTML = '';
-   setTimeout(change_green,0);
-   setTimeout(change_yellow,1200);
-   setTimeout(change_red,2000);
-  }
+
+   new Promise(resolve => setTimeout(() => resolve(change_green()), 0)
+   ).then(() => {
+     return new Promise(resolve => setTimeout(() => resolve(change_yellow()), 1000));
+   }).then(() => {
+     return new Promise(resolve => setTimeout(() => resolve(change_red()), 1000));
+   });
+
+ }
 })();
