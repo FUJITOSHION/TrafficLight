@@ -6,12 +6,12 @@
   var act = document.getElementById('act');
   var repeatFlag =false;
 
-  var initFunc = function(){
+  var startFunc = function(){
     // 初期値
     yellow.className=green.className='Dark';
     red.className='';
   }
-  var inact = function(){
+  var workingFunc = function(){
     //途中
     repeatFlag =true;
     red.className=yellow.className=green.className='Dark';
@@ -24,19 +24,19 @@
    repeatFlag =false;
   }
   var change_green = function(){
-    inact();
+    workingFunc();
     green.className='';
   }
   var change_yellow = function(){
-    inact();
+    workingFunc();
     yellow.className='';
   }
   var change_red = function(){
-    inact();
+    workingFunc();
     red.className='';
     endFunc();
   }
-  initFunc();
+  startFunc();
 
   act.onclick =function(){
     if(repeatFlag==true){
