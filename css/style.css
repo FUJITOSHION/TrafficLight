@@ -7,13 +7,21 @@ body{
   height: 200px;
   background: #a9a9a9;
   border-radius: 100px;
+  display: flex;
+  justify-content: space-evenly;
 }
-#green,#yellow,#red{
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
-/* background: lightgreen; */
+.Dark{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 -15px 4px;
+  opacity: 0.1;
+}
+.color{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 -15px 4px;
 }
 #green{
 background: lightgreen;
@@ -24,13 +32,6 @@ background: lightgreen;
 #red{
   background: red;
   }
-#green.Dark,#yellow.Dark,#red.Dark{
-width: 150px;
-height: 150px;
-border-radius: 50%;
-box-shadow: 0 -15px 4px;
-opacity: 0.1;
-}
 #yellow.Dark{
 background: yellow;
 }
@@ -39,10 +40,6 @@ background: green;
 }
 #red.Dark{
 background: red;
-}
-.container,.btn{
-  display: flex;
-  justify-content: space-evenly;
 }
 #act{
   cursor: pointer;
@@ -63,6 +60,6 @@ background: red;
 }
 
 #act.pushed{
-  margin-top: 5px;
+  margin-top: 110px;
   box-shadow: 0 4px 0 darkblue;
 }
