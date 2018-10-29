@@ -8,13 +8,13 @@
 
   let startFunc = function(){
     // 初期値
-    yellow.className=green.className='Dark color';
+    yellow.className=green.className='dark color';
     red.className='color';
   }
   let workingFunc = function(){
     //途中
     repeatFlag =true;
-    red.className=yellow.className=green.className='Dark color';
+    red.className=yellow.className=green.className='dark color';
     act.innerHTML = '';
   }
   let endFunc = function(){
