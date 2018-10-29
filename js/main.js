@@ -1,37 +1,37 @@
 (function(){
   'use strict';
-  var green = document.getElementById('green');
-  var yellow = document.getElementById('yellow');
-  var red = document.getElementById('red');
-  var act = document.getElementById('act');
-  var repeatFlag =false;
+  let green = document.getElementById('green');
+  let yellow = document.getElementById('yellow');
+  let red = document.getElementById('red');
+  let act = document.getElementById('act');
+  let repeatFlag =false;
 
-  var startFunc = function(){
+  let startFunc = function(){
     // 初期値
     yellow.className=green.className='Dark';
     red.className='';
   }
-  var workingFunc = function(){
+  let workingFunc = function(){
     //途中
     repeatFlag =true;
     red.className=yellow.className=green.className='Dark';
     act.innerHTML = '';
   }
-  var endFunc = function(){
+  let endFunc = function(){
    //終了時
    act.innerHTML = 'start';
    act.className = ''
    repeatFlag =false;
   }
-  var change_green = function(){
+  let change_green = function(){
     workingFunc();
     green.className='';
   }
-  var change_yellow = function(){
+  let change_yellow = function(){
     workingFunc();
     yellow.className='';
   }
-  var change_red = function(){
+  let change_red = function(){
     workingFunc();
     red.className='';
     endFunc();
