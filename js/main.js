@@ -5,13 +5,13 @@
   const act = document.getElementById('act');
   let repeatFlag = false;
 
-  const startFunc = function() {
+  let startFunc = function() {
     // 初期値
     yellow.className = 'dark color';
     green.className = 'dark color';
     red.className = 'color';
   }
-  const workingFunc = function() {
+  let workingFunc = function() {
     //途中
     repeatFlag = true;
     red.className = 'dark color';
@@ -19,21 +19,21 @@
     green.className = 'dark color';
     act.innerHTML = '';
   }
-  const endFunc = function() {
+  let endFunc = function() {
     //終了時
     act.innerHTML = 'start';
     act.className = ''
     repeatFlag = false;
   }
-  const changeGreen = function() {
+  let changeGreen = function() {
     workingFunc();
     green.className = 'color';
   }
-  const changeYellow = function() {
+  let changeYellow = function() {
     workingFunc();
     yellow.className = 'color';
   }
-  const changeRed = function() {
+  let changeRed = function() {
     workingFunc();
     red.className = 'color';
     endFunc();
