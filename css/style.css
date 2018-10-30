@@ -10,7 +10,7 @@ body{
   display: flex;
   justify-content: space-evenly;
 }
-.Dark{
+.dark{
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -24,22 +24,22 @@ body{
   box-shadow: 0 -15px 4px;
 }
 #green{
-background: lightgreen;
+  background: lightgreen;
 }
 #yellow{
   background-color: yellow;
   }
 #red{
   background: red;
-  }
-#yellow.Dark{
-background: yellow;
 }
-#green.Dark{
-background: green;
+#yellow.dark{
+  background: yellow;
 }
-#red.Dark{
-background: red;
+#green.dark{
+  background: green;
+}
+#red.dark{
+  background: red;
 }
 #act{
   cursor: pointer;
