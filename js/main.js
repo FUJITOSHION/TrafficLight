@@ -5,7 +5,7 @@
   const act = document.getElementById('act');
   let repeatFlag = false;
 
-  let startFunc = function() {
+  const startFunc = function() {
     // 初期値
     yellow.className = 'dark color';
     green.className = 'dark color';
