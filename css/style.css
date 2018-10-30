@@ -1,7 +1,8 @@
-body{
+body {
   background: #eee;
 }
-.container{
+
+.container {
   margin: 100px auto;
   width: 600px;
   height: 200px;
@@ -10,38 +11,47 @@ body{
   display: flex;
   justify-content: space-evenly;
 }
-.dark{
+
+.dark {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   box-shadow: 0 -15px 4px;
   opacity: 0.1;
 }
-.color{
+
+.color {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   box-shadow: 0 -15px 4px;
 }
-#green{
+
+#green {
   background: lightgreen;
 }
-#yellow{
+
+#yellow {
   background-color: yellow;
-  }
-#red{
+}
+
+#red {
   background: red;
 }
-#yellow.dark{
+
+#yellow.dark {
   background: yellow;
 }
-#green.dark{
+
+#green.dark {
   background: green;
 }
-#red.dark{
+
+#red.dark {
   background: red;
 }
-#act{
+
+#act {
   cursor: pointer;
   background: blue;
   width: 100px;
@@ -52,14 +62,14 @@ body{
   opacity: 0.8;
   box-shadow: 0 10px 0 darkblue;
   user-select: none;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
-#act:hover{
+#act:hover {
   opacity: 1;
 }
 
-#act.pushed{
+#act.pushed {
   margin-top: 110px;
   box-shadow: 0 4px 0 darkblue;
 }
