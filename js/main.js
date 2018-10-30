@@ -1,56 +1,55 @@
 (function(){
   'use strict';
-  let green = document.getElementById('green');
-  let yellow = document.getElementById('yellow');
-  let red = document.getElementById('red');
-  let act = document.getElementById('act');
-  let repeatFlag =false;
+  const yellow = document.getElementById('yellow');
+  const red = document.getElementById('red');
+  const act = document.getElementById('act');
+  let repeatFlag =  false;
 
-  let startFunc = function(){
+  const startFunc =  function(){
     // 初期値
-    yellow.className=green.className='dark color';
-    red.className='color';
+    yellow.className=green.className=  'dark color';
+    red.className=  'color';
   }
-  let workingFunc = function(){
+  const workingFunc =  function(){
     //途中
-    repeatFlag =true;
-    red.className=yellow.className=green.className='dark color';
-    act.innerHTML = '';
+    repeatFlag =  true;
+    red.className=yellow.className=green.className=  'dark color';
+    act.innerHTML =  '';
   }
-  let endFunc = function(){
-   //終了時
-   act.innerHTML = 'start';
-   act.className = ''
-   repeatFlag =false;
+  const endFunc = function(){
+    //終了時
+    act.innerHTML =  'start';
+    act.className =  ''
+    repeatFlag =  false;
   }
-  let change_green = function(){
+  const changeGreen =  function(){
     workingFunc();
-    green.className='color';
+    green.className=  'color';
   }
-  let change_yellow = function(){
+  const changeYellow =  function(){
     workingFunc();
-    yellow.className='color';
+    yellow.className=  'color';
   }
-  let change_red = function(){
+  const changeRed =  function(){
     workingFunc();
-    red.className='color';
+    red.className=  'color';
     endFunc();
   }
   startFunc();
 
-  act.onclick =function(){
-    if(repeatFlag==true){
+  act.onclick =   function(){
+    if(repeatFlag){
       return;
     }
-   this.className ='pushed';
-   act.innerHTML = '';
+    this.className =  'pushed';
+    act.innerHTML =  '';
 
-   new Promise(resolve => setTimeout(() => resolve(change_green()), 0)
-   ).then(() => {
-     return new Promise(resolve => setTimeout(() => resolve(change_yellow()), 1000));
-   }).then(() => {
-     return new Promise(resolve => setTimeout(() => resolve(change_red()), 1000));
-   });
+    new Promise(resolve => setTimeout(() => resolve(changeGreen()), 0))
+    .then(() => {
+      return new Promise(resolve => setTimeout(() => resolve(changeYellow()), 1000));
+    }).then(() => {
+        return new Promise(resolve => setTimeout(() => resolve(changeRed()), 1000));
+      });
 
- }
+  }
 })();
